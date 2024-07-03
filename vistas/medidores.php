@@ -28,7 +28,6 @@ $datos = leerDatos($coleccion);
         if (confirm("Seguro que quieres eliminar este registro?")) {
             window.location.href = "../funciones/procesar_eliminar.php?id=" + id;
         }else{
-        // El usuario canceló la eliminación
             return false;
     }
 }
