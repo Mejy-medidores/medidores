@@ -26,7 +26,7 @@ $datos = leerDatos($coleccion);
 <script>
     function confirmarEliminar(id) {
         if (confirm("Seguro que quieres eliminar este registro?")) {
-            window.location.href = "../funciones/procesar_eliminar.php?id=" + id;
+            window.location.href = "../funciones/procesar_eliminar2.php?id=" + id;
         }else{
             return false;
     }
@@ -39,7 +39,7 @@ $datos = leerDatos($coleccion);
     <h1>Salida de: <?php echo $coleccion; ?></h1>
     <img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
     <br>
-    <a href="./formulario_crear.php">Agregar Nuevo Registro</a>
+    <a href="./formulario_crear2.php">Agregar Nuevo Registro</a>
     <table border="1">
         <thead>
             <tr>

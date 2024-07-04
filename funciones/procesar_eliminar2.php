@@ -1,7 +1,7 @@
 <?php
-include '../Clases/conexion.php';
+include '../Clases/conexion2.php';
 
-$coleccion = 'medidores'; 
+$coleccion = 'medidores_entrada'; 
 
 $id = $_GET['id']; 
 
@@ -19,7 +19,7 @@ function eliminarDatos($coleccion, $id) {
 $registrosEliminados = eliminarDatos($coleccion, $id);
 
 if ($registrosEliminados) {
-    header('Location: ../vistas/medidores.php');
+    header('Location: ../vistas2/medidores_entrantes.php');
     exit;
 } else {
     echo "Error al eliminar el registro";
