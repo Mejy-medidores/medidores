@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "667cb8a3c440a05ffadca184"
+  },
+  "cantidad": 10,
+  "marca": "Marca1",
+  "modelo": "ModeloA",
+  "provedor": "Proveedor1",
+  "procesoad": "Compra Directa",
+  "factura": "F12345",
+  "fechafactura": "2023-01-01",
+  "fechaentrada": "2023-01-02"
+},
+{
+  "_id": {
+    "$oid": "667cb8a3c440a05ffadca185"
+  },
+  "cantidad": 20,
+  "marca": "Marca2",
+  "modelo": "ModeloB",
+  "provedor": "Proveedor2",
+  "procesoad": "Licitación",
+  "factura": "F12346",
+  "fechafactura": "2023-02-01",
+  "fechaentrada": "2023-02-02"
+},
+{
+  "_id": {
+    "$oid": "667cb8a3c440a05ffadca186"
+  },
+  "cantidad": 15,
+  "marca": "Marca3",
+  "modelo": "ModeloC",
+  "provedor": "Proveedor3",
+  "procesoad": "Adjudicación Directa",
+  "factura": "F12347",
+  "fechafactura": "2023-03-01",
+  "fechaentrada": "2023-03-02"
+}]

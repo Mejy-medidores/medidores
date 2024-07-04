@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "667cb974c440a05ffadca189"
+  },
+  "num_medidor": "001",
+  "cuentamedidor": "CU001",
+  "nombreusuario": "Juan Perez",
+  "direccion": "Calle 123, Ciudad A",
+  "tipousuario": "Residencial",
+  "obra": "Proyecto A",
+  "cuadro": "Cuadro 1",
+  "fechainstalacion": "2023-01-15",
+  "fechasalida": "2023-01-20"
+},
+{
+  "_id": {
+    "$oid": "667cb974c440a05ffadca18a"
+  },
+  "num_medidor": "002",
+  "cuentamedidor": "CU002",
+  "nombreusuario": "Maria Gomez",
+  "direccion": "Avenida 456, Ciudad B",
+  "tipousuario": "Comercial",
+  "obra": "Proyecto B",
+  "cuadro": "Cuadro 2",
+  "fechainstalacion": "2023-02-10",
+  "fechasalida": "2023-02-15"
+},
+{
+  "_id": {
+    "$oid": "667cb974c440a05ffadca18b"
+  },
+  "num_medidor": "003",
+  "cuentamedidor": "CU003",
+  "nombreusuario": "Carlos Ramirez",
+  "direccion": "Calle 789, Ciudad C",
+  "tipousuario": "Industrial",
+  "obra": "Proyecto C",
+  "cuadro": "Cuadro 3",
+  "fechainstalacion": "2023-03-05",
+  "fechasalida": "2023-03-10"
+},
+{
+  "_id": {
+    "$oid": "667d9f8892b8c49e0308896c"
+  },
+  "num_medidor": "004",
+  "cuentamedidor": "2323",
+  "nombreusuario": "Jorge",
+  "direccion": "Campeche 5",
+  "tipousuario": "toma fija",
+  "obra": "Extirpación",
+  "cuadro": "si",
+  "fechainstalacion": "2024-06-27",
+  "fechasalida": "2024-06-27"
+}]
