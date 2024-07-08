@@ -69,7 +69,9 @@ $datos = leerDatos($coleccion);
                     <td><?php echo $dato->factura; ?></td>
                     <td><?php echo $dato->fechafactura; ?></td>
                     <td><?php echo $dato->fechaentrada; ?></td>
-                    <td></td>
+                    <td>
+                        <a href="./formulario_salida.php?id=<?php echo $dato->_id; ?>">Dar Salida</a>
+                    </td>
                     <td>
                         <a href="./formulario_editar.php?id=<?php echo $dato->_id; ?>">Editar</a>
                     </td>
