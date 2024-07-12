@@ -11,6 +11,8 @@ $datos = leerDatos($coleccion);
     <meta charset="UTF-8">
     <title>Medidores</title>
 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         body {
             background-color: #b0e0e6;
@@ -34,14 +36,36 @@ $datos = leerDatos($coleccion);
 </script>
 
 </head>
-<button><a href="../vistas/medidores.php" class="button">Ir a los medidores que salieron</a></button>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../IMG/logo2.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            MEJY || 2°do Modulo
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../vistas/medidores.php">Medidores que salieron</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
 <body>
     <h1>Salida de: <?php echo $coleccion; ?></h1>
     <img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
     <br>
     <a href="./formulario_crear2.php">Agregar Nuevo Registro</a>
-    <table border="1">
-        <thead>
+    <table class="table" border="1">
+        <thead class="thead-dark">
             <tr>
                 <th>ID</th>
                 <th>Numero</th>

@@ -65,21 +65,21 @@ $datos = leerDatos($coleccion);
     <img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
     <br>
     <a href="./formulario_crear.php">Agregar Nuevo Registro</a>
-    <table border="1">
-        <thead>
+    <table class="table" border="1">
+        <thead class="thead-dark">
             <tr>
-                <th>ID</th>
-                <th>numero</th>
-                <th>cuenta</th>
-                <th>usuario</th>
-                <th>direccion</th>
-                <th>tipo de usuario</th>
-                <th>obra</th>
-                <th>lleva cuadro</th>
-                <th>fecha instalación</th>
-                <th>salida</th>
-               <th>Editar</th>
-               <th>Eliminar</th>
+                <th scope="col">ID</th>
+                <th scope="col">numero</th>
+                <th scope="col">cuenta</th>
+                <th scope="col">usuario</th>
+                <th scope="col">direccion</th>
+                <th scope="col">tipo de usuario</th>
+                <th scope="col">obra</th>
+                <th scope="col">lleva cuadro</th>
+                <th scope="col">fecha instalación</th>
+                <th scope="col">salida</th>
+               <th scope="col">Editar</th>
+               <th scope="col">Eliminar</th>
             </tr>
         </thead>
         <tbody>
