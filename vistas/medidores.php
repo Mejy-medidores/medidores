@@ -12,6 +12,7 @@ $datos = leerDatos($coleccion);
     <title>Medidores</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
         body {
@@ -64,7 +65,7 @@ $datos = leerDatos($coleccion);
     <h1>Salida de: <?php echo $coleccion; ?></h1>
     <img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
     <br>
-    <a href="./formulario_crear.php">Agregar Nuevo Registro</a>
+    <a href="./formulario_crear.php"><button type="button" class="btn btn-primary">Agregar Nuevo Registro <i class="bi bi-plus-circle-fill"></i></button></a>
     <table class="table" border="1">
         <thead class="thead-dark">
             <tr>
@@ -96,10 +97,10 @@ $datos = leerDatos($coleccion);
                     <td><?php echo $dato->fechainstalacion; ?></td>
                     <td><?php echo $dato->fechasalida; ?></td>
                     <td>
-                        <a href="./formulario_editar.php?id=<?php echo $dato->_id; ?>">Editar</a>
+                        <a href="./formulario_editar.php?id=<?php echo $dato->_id; ?>"><button type="button" class="btn btn-warning">Editar <i class="bi bi-pen-fill"></i></button>
                     </td>
                     <td>
-                         <button onclick="confirmarEliminar('<?php echo $dato->_id; ?>')">Eliminar</button>
+                         <button onclick="confirmarEliminar('<?php echo $dato->_id; ?>')"type="button" class="btn btn-danger">Eliminar <i class="bi bi-trash-fill"></i></button>
                     </td>
                 </tr>
             <?php endforeach; ?>

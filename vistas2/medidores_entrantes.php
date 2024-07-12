@@ -12,6 +12,7 @@ $datos = leerDatos($coleccion);
     <title>Medidores</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
         body {
@@ -63,10 +64,7 @@ $datos = leerDatos($coleccion);
     <h1>Salida de: <?php echo $coleccion; ?></h1>
     <img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
     <br>
-    <a href="./formulario_crear2.php"><button type="button" class="btn btn-primary">Agregar Nuevo Registro  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
-  <path d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z"/>
-  <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5"/>
-</svg><i class="bi bi-folder-plus"></i></button></a>
+    <a href="./formulario_crear2.php"><button type="button" class="btn btn-primary">Agregar Nuevo Registro <i class="bi bi-plus-circle-fill"></i></button></a>
     <table class="table" border="1">
         <thead class="thead-dark">
             <tr>
@@ -97,13 +95,13 @@ $datos = leerDatos($coleccion);
                     <td><?php echo $dato->fechafactura; ?></td>
                     <td><?php echo $dato->fechaentrada; ?></td>
                     <td>
-                        <a href="./formulario_salida.php?id=<?php echo $dato->_id; ?>">Dar Salida</a>
+                        <a href="./formulario_salida.php?id=<?php echo $dato->_id; ?>"><button type="button" class="btn btn-success">Salida <i class="bi bi-send-arrow-down-fill"></i></button>
                     </td>
                     <td>
-                        <a href="./formulario_editar.php?id=<?php echo $dato->_id; ?>">Editar</a>
+                        <a href="./formulario_editar.php?id=<?php echo $dato->_id; ?>"><button type="button" class="btn btn-warning">Editar <i class="bi bi-pen-fill"></i></button>
                     </td>
                     <td>
-                         <button onclick="confirmarEliminar('<?php echo $dato->_id; ?>')">Eliminar</button>
+                         <button onclick="confirmarEliminar('<?php echo $dato->_id; ?>')" type="button" class="btn btn-danger">Eliminar <i class="bi bi-trash-fill"></i></button>
                     </td>
                 </tr>
             <?php endforeach; ?>
