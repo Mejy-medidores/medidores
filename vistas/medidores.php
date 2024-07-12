@@ -23,6 +23,30 @@ $datos = leerDatos($coleccion);
             padding: 0;
             font-family: Arial, sans-serif;
         }
+        .navbar {
+            background-color: #0EA9AD;
+            border-bottom: 2px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand img {
+            border-radius: 10%;
+            margin-right: 10px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            margin-right: 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #e0f7fa !important;
+        }
+        .navbar-toggler {
+            border: 1px solid #fff;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
     </style>
 
 
@@ -40,26 +64,27 @@ $datos = leerDatos($coleccion);
 <body>
 
 <header>
-    <nav class="navbar navbar-light" style="background-color: #0EA9AD;">
-        <a class="navbar-brand" href="#">
-            <img src="../IMG/logo2.png" alt="Logo" width="90" height="80" class="d-inline-block align-top">
-            MEJY || 2°do Modulo
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../vistas2/medidores_entrantes.php">Medidores de salida</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0EA9AD;">
+    <a class="navbar-brand" href="#">
+                <img src="../IMG/logo2.png" alt="Logo" width="90" height="80" class="d-inline-block align-top">
+                MEJY || 2°do Modulo
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vistas2/medidores_entrantes.php">Medidores de salida</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
 
 
     <h1>Salida de: <?php echo $coleccion; ?></h1>
