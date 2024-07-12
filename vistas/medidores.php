@@ -40,9 +40,9 @@ $datos = leerDatos($coleccion);
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-light" style="background-color: #0EA9AD;">
         <a class="navbar-brand" href="#">
-            <img src="../IMG/logo2.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            <img src="../IMG/logo2.png" alt="Logo" width="90" height="80" class="d-inline-block align-top">
             MEJY || 2°do Modulo
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
