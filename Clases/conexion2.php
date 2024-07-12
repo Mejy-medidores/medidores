@@ -14,5 +14,5 @@ function leerDatos($coleccion) {
     return $resultados;
 }
 
-echo "Conexión exitosa a MongoDB";
+echo "Conexión exitosa";
 ?>
