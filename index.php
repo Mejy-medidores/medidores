@@ -1,3 +1,3 @@
 <?php
-header('Location: ./vistas/medidores.php');
+header('Location: login.html');
 ?>
