@@ -55,7 +55,7 @@ if (!isset($_SESSION['email'])) {
         <h1>Caev</h1>
         <div class="user-area dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <?php echo htmlspecialchars($_SESSION['user']); ?>
+                <?php echo htmlspecialchars($_SESSION['email']); ?>
             </button>
             <span class="mr-2">
                 <i class="fas fa-user-circle fa-2x"></i>
