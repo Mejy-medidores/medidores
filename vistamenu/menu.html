@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="estiloMenu.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Caev</h1>
+        <div class="user-area dropdown">
+            
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Nombre Uusario</button>
+            <span class="mr-2">
+                <i class="fas fa-user-circle fa-2x"></i>
+            </span>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item logout-btn" onclick="logout()">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    
+
+    <img src="../IMG/logo2.png" class="logo top-left" alt="Logo" >
+    
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <div class="col-auto">
+                <div class="card">
+                    <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de entrada"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Medidores de entrada</h5>
+                        <p class="card-text">
+                            Medición precisa y confiable para optimizar tus procesos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-auto">
+                <div class="card">
+                    <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de salida"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Medidores de salida</h5>
+                        <p class="card-text">
+                            Monitoreo efectivo de tus salidas de datos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-auto">
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de entrada"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Reportes de entrada</h5>
+                        <p class="card-text">
+                            Generación de reportes claros y concisos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-auto">
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de salida"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Reportes de salida</h5>
+                        <p class="card-text">
+                            Visualiza tus salidas con claridad y precisión.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="card">
+                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Reportes de salida"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Gestionar usuarios</h5>
+                        <p class="card-text">
+                            LLeva la organizacion de los usuarios
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="card">
+                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Reportes de salida"/>
+                    <div class="card-body">
+                        <h5 class="card-title-logout">Cerrar sesion</h5>
+                        <button>Cerrar sesion</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nombre de la Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function logout() {
+            // Aquí puedes agregar la lógica de cierre de sesión
+            alert("Sesión cerrada"); // Ejemplo simple
+        }
+    </script>
+</body>
+</html>

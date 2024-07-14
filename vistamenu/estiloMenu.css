@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../IMG/logo2.jpg');
+    background-size:auto;
+    background-position: center;
+    backdrop-filter: blur(0px);
+}
+
+header, footer {
+    width: 100%;
+    background-color: rgb(28, 31, 59);
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+header h1 {
+    margin: 0;
+    flex: 1; /* Permite que el h1 use el espacio disponible */
+}
+
+.user-area {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    margin-left: 10px; /* Ajusta este valor según sea necesario */
+}
+
+
+
+footer {
+    bottom: 0;
+    color: #ffffff;
+}
+
+.logo {
+    width: 50px;
+    position: absolute;
+}
+
+.logo.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.logo.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.logo.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.logo.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    width: 80px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+.card-title-logout {
+    font-weight: bold;
+    color: #ff0000;
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.user-area {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    min-width: 200px; /* Ancho del cuadro desplegable */
+}
+
+.logout-btn {
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+i{
+    color:#ffffff
+}
