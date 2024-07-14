@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['email'])) {
     // Redirigir a la página de login si no está autenticado
     header('Location: ../index.php'); // Cambia esto a la ruta de tu archivo de login
     exit();

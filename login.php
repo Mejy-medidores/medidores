@@ -9,15 +9,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = verificarUsuario($email, $password);
 
     if ($usuario) {
-        $_SESSION['user'] = $usuario['nombre']; // Guarda el nombre del usuario en la sesión
-        header('Location: vistamenu/menu.php'); // Redirige a la página de menú si las credenciales son válidas
+        $_SESSION['email'] = $usuario['email'];
+        echo "Redirigiendo a menu.php..."; // Mensaje de depuración
+        header('Location: vistamenu/menu.php');
         exit();
     } else {
         $error = "Credenciales incorrectas. Por favor, intenta de nuevo.";
     }
-}
+}    
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </form>
+                        <?php if (isset($error)) { echo "<p class='text-danger'>$error</p>"; } ?>
                     </div>
                 </div>
             </div>

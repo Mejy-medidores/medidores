@@ -1,18 +1,28 @@
 <?php
-require_once 'C:/xampp/htdocs/Modulo2/vendor/autoload.php';
-// Asegúrate de que Composer haya generado el autoloader
+require_once 'C:/xampp/htdocs/Modulo2/vendor/autoload.php'; // Asegúrate de que Composer haya generado el autoloader
+
+use MongoDB\Client as MongoClient; // Usa el alias de MongoDB
 
 $uri = "mongodb://localhost:27017"; // La URI de conexión a MongoDB
-$client = new MongoDB\Client($uri);
+$client = new MongoClient($uri);
 
 $database = $client->medidores;
 $collection = $database->usuarios; // Cambia 'usuarios' por el nombre de tu colección de usuarios
 
 function verificarUsuario($email, $password) {
     global $collection;
-    $usuario = $collection->findOne(['email' => $email, 'password' => $password]);
-    return $usuario;
+
+    // Buscar el usuario por email
+    $usuario = $collection->findOne(['email' => $email]);
+
+    if ($usuario) {
+        if ($usuario && $usuario['password'] === $password) {
+            return $usuario;
+        }
+        
+    }
+
+    return false;
 }
-echo realpath('../vendor/autoload.php');
 
 ?>
