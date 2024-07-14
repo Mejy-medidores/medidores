@@ -1,3 +1,24 @@
+<?php
+session_start();
+require 'clases/conexionlogin.php'; // Incluye el archivo de conexión
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $usuario = verificarUsuario($email, $password);
+
+    if ($usuario) {
+        $_SESSION['user'] = $usuario['nombre']; // Guarda el nombre del usuario en la sesión
+        header('Location: vistamenu/menu.php'); // Redirige a la página de menú si las credenciales son válidas
+        exit();
+    } else {
+        $error = "Credenciales incorrectas. Por favor, intenta de nuevo.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
