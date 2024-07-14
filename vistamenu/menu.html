@@ -10,14 +10,41 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="estiloMenu.css">
-    
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #001d5c;
+            padding: 10px 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header .user-area {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-area span {
+            margin-left: 10px;
+        }
+        .card {
+            margin-bottom: 10px;
+        }
+        .card img {
+            height: 80px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Caev</h1>
         <div class="user-area dropdown">
-            
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Nombre usario</button>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre usuario</button>
             <span class="mr-2">
                 <i class="fas fa-user-circle fa-2x"></i>
             </span>
@@ -26,91 +53,73 @@
             </div>
         </div>
     </header>
-    
 
-    <img src="../IMG/logo2.png" class="logo top-left" alt="Logo" >
-    
-
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-            <div class="col-auto">
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            <div class="col">
                 <div class="card">
                     <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de entrada"/>
                     <div class="card-body">
-                        <h5 class="card-title">Medidores de entrada</h5>
-                        <p class="card-text">
-                            Medición precisa y confiable para optimizar tus procesos.
-                        </p>
+                        <h5 class="card-title">Medidores</h5>
+                        <a href="../vistas2/medidores_entrantes.php" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-auto">
+            <div class="col">
                 <div class="card">
                     <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de salida"/>
                     <div class="card-body">
-                        <h5 class="card-title">Medidores de salida</h5>
-                        <p class="card-text">
-                            Monitoreo efectivo de tus salidas de datos.
-                        </p>
+                        <h5 class="card-title">Medidores salientes</h5>
+                        <a href="../vistas/medidores.php" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-auto">
+            <div class="col">
                 <div class="card">
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de entrada"/>
                     <div class="card-body">
                         <h5 class="card-title">Reportes de entrada</h5>
-                        <p class="card-text">
-                            Generación de reportes claros y concisos.
-                        </p>
+                        <a href="enlace_a_reportes_entrada.html" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-auto">
+            <div class="col">
                 <div class="card">
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de salida"/>
                     <div class="card-body">
                         <h5 class="card-title">Reportes de salida</h5>
-                        <p class="card-text">
-                            Visualiza tus salidas con claridad y precisión.
-                        </p>
+                        <a href="enlace_a_reportes_salida.html" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
-            <div class="col-auto">
+            <div class="col">
                 <div class="card">
-                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Reportes de salida"/>
+                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Gestionar usuarios"/>
                     <div class="card-body">
                         <h5 class="card-title">Gestionar usuarios</h5>
-                        <p class="card-text">
-                            LLeva la organizacion de los usuarios
-                        </p>
+                        <a href="enlace_a_gestionar_usuarios.html" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
-            <div class="col-auto">
+            <div class="col">
                 <div class="card">
-                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Reportes de salida"/>
-                    <div class="card-body">
-                        <h5 class="card-title-logout">Cerrar sesion</h5>
-                        <button>Cerrar sesion</button>
+                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Cerrar sesión"/>
+                    <div class="card-body text-center">
+                        <h5 class="card-title-logout">Cerrar sesión</h5>
+                        <button class="btn btn-danger" onclick="logout()">Cerrar sesión</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Comición del Agua del Estado de Veracruz||CAEV.</p>
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Comisión del Agua del Estado de Veracruz || CAEV.</p>
     </footer>
 
     <script>
         function logout() {
-            // Aquí puedes agregar la lógica de cierre de sesión
-            alert("Sesión cerrada"); // Ejemplo simple
+            alert("Sesión cerrada");
         }
     </script>
 </body>
