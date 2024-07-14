@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    // Redirigir a la página de login si no está autenticado
+    header('Location: ../index.php'); // Cambia esto a la ruta de tu archivo de login
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="estiloMenu.css">
     <style>
         body {
@@ -44,7 +54,9 @@
     <header class="header">
         <h1>Caev</h1>
         <div class="user-area dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre usuario</button>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?php echo htmlspecialchars($_SESSION['user']); ?>
+            </button>
             <span class="mr-2">
                 <i class="fas fa-user-circle fa-2x"></i>
             </span>
@@ -119,8 +131,7 @@
 
     <script>
         function logout() {
-            alert("Sesión cerrada");
-            window.location.href = '../login.html';
+            window.location.href = 'logout.php'; // Redirige a la página de cierre de sesión
         }
     </script>
 </body>
