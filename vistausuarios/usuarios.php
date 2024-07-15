@@ -10,9 +10,24 @@ $usuarios = $collection->find();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('../IMG/fondo2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .table thead {
+            background-color: #000;
+            color: #fff;
+        }
+        .table tbody tr {
+            background-color: #fff;
+        }
+    </style>
     <script>
         function confirmarEliminacion(id) {
-            if (confirm("¿Estás seguro de que deseas eliminar este usuario?, no se puede revertir la acción.")) {
+            if (confirm("¿Estás seguro de que deseas eliminar este usuario?")) {
                 window.location.href = "delete.php?id=" + id;
             }
         }
