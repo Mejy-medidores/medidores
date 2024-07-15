@@ -15,16 +15,22 @@ $datos = leerDatos($coleccion);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
-        body {
-            background-color: #b0e0e6;
-            background: linear-gradient(to bottom, #b0e0e6, #3b6978);
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+       body {
+        position: relative; /* Asegura que los elementos se posicionen correctamente en relación al body */
+        background-image: url('../IMG/fondo.jpg'); /* Ruta a tu imagen de fondo */
+        background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: 16px; /* Tamaño de fuente inicial */
+        color: #fff; /* Color del texto para asegurar visibilidad sobre el fondo */
+    }
+
         .navbar {
-            background-color: #0EA9AD;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el navbar */
             border-bottom: 2px solid #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -47,6 +53,13 @@ $datos = leerDatos($coleccion);
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
+        th {
+        background-color: #343a40;
+        color: white;
+    }
+    td {
+        background-color: #ffffff; /* Fondo blanco para las celdas de la tabla */
+    }
     </style>
 
 
@@ -64,7 +77,7 @@ $datos = leerDatos($coleccion);
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0EA9AD;">
+    <nav class="navbar navbar-expand-lg navbar-light" >
     <a class="navbar-brand" href="#">
                 <img src="../IMG/logo2.png" alt="Logo" width="90" height="80" class="d-inline-block align-top">
                 MEJY || 2°do Modulo

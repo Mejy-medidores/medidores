@@ -2,13 +2,11 @@
 session_start();
 
 if (!isset($_SESSION['email'])) {
-    // Redirigir a la página de login si no está autenticado
-    header('Location: ../index.php'); // Cambia esto a la ruta de tu archivo de login
+    header('Location: ../index.php'); 
     exit();
 }
 
-$rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la clave 'rol' esté definida
-
+$rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; 
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +49,12 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la 
             height: 80px;
             object-fit: cover;
         }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -77,7 +81,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la 
                     <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de entrada"/>
                     <div class="card-body">
                         <h5 class="card-title">Medidores</h5>
-                        <a href="../vistas2/medidores_entrantes.php" class="btn btn-primary">Ver más</a>
+                        <a href="../vistas2/medidores_entrantes.php" class="btn btn-primary">Ir</a>
                     </div>
                 </div>
             </div>
@@ -86,7 +90,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la 
                     <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de salida"/>
                     <div class="card-body">
                         <h5 class="card-title">Medidores salientes</h5>
-                        <a href="../vistas/medidores.php" class="btn btn-primary">Ver más</a>
+                        <a href="../vistas/medidores.php" class="btn btn-primary">Ir</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +99,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la 
                     <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Gestionar usuarios"/>
                     <div class="card-body">
                         <h5 class="card-title">Gestionar usuarios</h5>
-                        <a href="../vistausuarios/usuarios.php" class="btn btn-primary">Ver más</a>
+                        <a href="../vistausuarios/usuarios.php" class="btn btn-primary">Ir</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +109,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la 
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de entrada"/>
                     <div class="card-body">
                         <h5 class="card-title">Reportes de entrada</h5>
-                        <a href="enlace_a_reportes_entrada.html" class="btn btn-primary">Ver más</a>
+                        <a href="enlace_a_reportes_entrada.html" class="btn btn-primary">Ir</a>
                     </div>
                 </div>
             </div>
@@ -114,15 +118,15 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la 
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de salida"/>
                     <div class="card-body">
                         <h5 class="card-title">Reportes de salida</h5>
-                        <a href="enlace_a_reportes_salida.html" class="btn btn-primary">Ver más</a>
+                        <a href="enlace_a_reportes_salida.html" class="btn btn-primary">Ir</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
                     <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Cerrar sesión"/>
-                    <div class="card-body text-center">
-                        <h5 class="card-title-logout">Cerrar sesión</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Cerrar sesión</h5>
                         <button class="btn btn-danger" onclick="logout()">Cerrar sesión</button>
                     </div>
                 </div>
@@ -136,7 +140,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la 
 
     <script>
         function logout() {
-            window.location.href = 'logout.php'; // Redirige a la página de cierre de sesión
+            window.location.href = 'logout.php'; 
         }
     </script>
 </body>
