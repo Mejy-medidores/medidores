@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php'; // Asegúrate de que Composer haya generado el autoloader
+require 'vendor/autoload.php'; // Asegúrate de que Composer haya generado el autoloader
 
 use MongoDB\Client as MongoClient; // Usa el alias de MongoDB
 
