@@ -10,14 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($usuario) {
         $_SESSION['email'] = $usuario['email'];
-        echo "Redirigiendo a menu.php..."; // Mensaje de depuración
+        $_SESSION['rol'] = $usuario['rol']; // Guarda el rol del usuario en la sesión
         header('Location: vistamenu/menu.php');
         exit();
     } else {
         $error = "Credenciales incorrectas. Por favor, intenta de nuevo.";
     }
-}    
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -6,10 +6,13 @@ if (!isset($_SESSION['email'])) {
     header('Location: ../index.php'); // Cambia esto a la ruta de tu archivo de login
     exit();
 }
+
+$rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : ''; // Asegúrate de que la clave 'rol' esté definida
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +55,7 @@ if (!isset($_SESSION['email'])) {
 </head>
 <body>
     <header class="header">
-        <h1> ___________________Caev || MEJY Modulo 2______________</h1>
+        <h1>___________________Caev || MEJY Modulo 2______________</h1>
         <div class="user-area dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php echo htmlspecialchars($_SESSION['email']); ?>
@@ -68,6 +71,7 @@ if (!isset($_SESSION['email'])) {
 
     <div class="container mt-5">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            <?php if ($rol === 'admin'): ?>
             <div class="col">
                 <div class="card">
                     <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de entrada"/>
@@ -88,6 +92,16 @@ if (!isset($_SESSION['email'])) {
             </div>
             <div class="col">
                 <div class="card">
+                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Gestionar usuarios"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Gestionar usuarios</h5>
+                        <a href="../vistausuarios/usuarios.php" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+            <div class="col">
+                <div class="card">
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de entrada"/>
                     <div class="card-body">
                         <h5 class="card-title">Reportes de entrada</h5>
@@ -101,15 +115,6 @@ if (!isset($_SESSION['email'])) {
                     <div class="card-body">
                         <h5 class="card-title">Reportes de salida</h5>
                         <a href="enlace_a_reportes_salida.html" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Gestionar usuarios"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Gestionar usuarios</h5>
-                        <a href="../vistausuarios/usuarios.php" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
