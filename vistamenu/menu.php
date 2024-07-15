@@ -109,7 +109,7 @@ if (!isset($_SESSION['email'])) {
                     <img src="https://w7.pngwing.com/pngs/288/840/png-transparent-computer-icons-user-crowd-social-group-others-miscellaneous-monochrome-social-group.png" class="card-img-top" alt="Gestionar usuarios"/>
                     <div class="card-body">
                         <h5 class="card-title">Gestionar usuarios</h5>
-                        <a href="enlace_a_gestionar_usuarios.html" class="btn btn-primary">Ver más</a>
+                        <a href="../vistausuarios/usuarios.php" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
