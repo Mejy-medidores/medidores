@@ -19,8 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: 
+                linear-gradient(135deg, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)),
+                url('IMG/logo2.jpg');
+            background-size: cover;
+            background-position: center;
             height: 100vh;
             margin: 0;
             display: flex;
@@ -39,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             align-items: center;
         }
         .container {
+            position: relative;
+            z-index: 1;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -47,6 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .login-card {
             width: 100%;
             max-width: 900px;
+            backdrop-filter: blur(10px);
+        }
+        .card-body {
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
         }
     </style>
 </head>
