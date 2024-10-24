@@ -78,7 +78,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : '';
             <?php if ($rol === 'admin'): ?>
             <div class="col">
                 <div class="card">
-                    <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de entrada"/>
+                    <img src="../IMG/medidor-de-agua.png" class="card-img-top" alt="Medidores de entrada"/>
                     <div class="card-body">
                         <h5 class="card-title">Medidores</h5>
                         <a href="../vistas2/medidores_entrantes.php" class="btn btn-primary">Ir</a>
@@ -87,7 +87,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : '';
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="https://equysis.com/images/contenido/medidorchorromultipleplastico420200408165700.jpg" class="card-img-top" alt="Medidores de salida"/>
+                    <img src="../IMG/water-meter.png" class="card-img-top" alt="Medidores de salida"/>
                     <div class="card-body">
                         <h5 class="card-title">Medidores salientes</h5>
                         <a href="../vistas/medidores.php" class="btn btn-primary">Ir</a>
