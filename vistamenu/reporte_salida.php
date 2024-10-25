@@ -66,31 +66,49 @@ $datos = leerDatos($coleccion);
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light" >
-    <a class="navbar-brand" href="#">
-                <img src="../IMG/logo2.png" alt="Logo" width="90" height="80" class="d-inline-block align-top">
-                MEJY || 2°do Modulo
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./menu.php">Regresar al menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./medidores_entrantes.php">Reporte de los medidores entrantes</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="../IMG/logo2.png" alt="Logo" width="90" height="80">
+            MEJY || 2°do Modulo
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./menu.php">Regresar al menú</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./reporte_entrada.php">Reporte de los medidores entrantes</a>
+                </li>
+                <!-- Botones con íconos para cambiar el tamaño de la letra -->
+                <li class="nav-item">
+                    <button id="aumentar" class="btn btn-secondary">
+                        <i class="bi bi-plus-circle"></i> <!-- Ícono de aumentar -->
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button id="reducir" class="btn btn-secondary">
+                        <i class="bi bi-dash-circle"></i> <!-- Ícono de reducir -->
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 
 
     <h1>Salida de: <?php echo $coleccion; ?></h1>
     <img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
+
+    <!-- Botón para generar el PDF -->
+<form action="generar_pdf.php" method="post">
+    <button type="submit" class="btn btn-danger">Exportar a PDF<i class="bi bi-file-earmark-pdf-fill"></i></button>
+</form>
+
+
     <br>
     <table class="table" border="1">
         <thead class="thead-dark">
@@ -126,6 +144,23 @@ $datos = leerDatos($coleccion);
     </table>
        
 </body>
+
+<script>
+    // Aumentar tamaño de fuente
+    document.getElementById('aumentar').addEventListener('click', function() {
+        document.querySelectorAll('body, table, th, td').forEach(function(el) {
+            el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) + 1) + 'px';
+        });
+    });
+
+    // Reducir tamaño de fuente
+    document.getElementById('reducir').addEventListener('click', function() {
+        document.querySelectorAll('body, table, th, td').forEach(function(el) {
+            el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) - 1) + 'px';
+        });
+    });
+</script>
+
 <!-- Incluir jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Incluir Popper.js -->
