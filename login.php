@@ -24,7 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Inicie sesión</title>
+    <link rel="manifest" href="./manifest.json">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
@@ -78,16 +79,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <button id="install-button" style="display: none;">Instalar aplicación</button>
+
                         </form>
+
                         <?php if (isset($error)) { echo "<p class='text-danger'>$error</p>"; } ?>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./sw.js"></script>
+    <script>
+        let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Evitar que el navegador muestre el aviso automáticamente
+  e.preventDefault();
+  // Guardar el evento para poder activarlo más tarde
+  deferredPrompt = e;
+
+  // Muestra un botón personalizado para instalar
+  const installButton = document.getElementById('install-button');
+  if (installButton) {
+    installButton.style.display = 'block';
+    installButton.addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Usuario aceptó la instalación');
+        } else {
+          console.log('Usuario rechazó la instalación');
+        }
+        deferredPrompt = null;
+      });
+    });
+  }
+});
+</script>
 </body>
 </html>

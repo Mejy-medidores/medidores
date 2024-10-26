@@ -77,82 +77,105 @@ $datos = leerDatos($coleccion);
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light" >
-    <a class="navbar-brand" href="#">
-                <img src="../IMG/logo2.png" alt="Logo" width="90" height="80" class="d-inline-block align-top">
-                MEJY || 2°do Modulo
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../vistamenu/menu.php">Regresar al menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../vistas2/medidores_entrantes.php">Medidores de salida</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="../IMG/logo2.png" alt="Logo" width="90" height="80" class="d-inline-block align-top">
+            MEJY || 2°do Modulo
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../vistamenu/menu.php">Regresar al menú</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../vistas2/medidores_entrantes.php">Medidores de salida</a>
+                </li>
+                <!-- Botones para aumentar y reducir tamaño de la letra -->
+                <li class="nav-item">
+                    <button id="aumentar" class="btn btn-secondary">
+                        <i class="bi bi-plus-circle"></i> <!-- Ícono de aumentar -->
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button id="reducir" class="btn btn-secondary">
+                        <i class="bi bi-dash-circle"></i> <!-- Ícono de reducir -->
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-
-
-    <h1>Salida de: <?php echo $coleccion; ?></h1>
-    <img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
-    <br>
-    <a href="./formulario_crear.php"><button type="button" class="btn btn-primary">Agregar Nuevo Registro <i class="bi bi-plus-circle-fill"></i></button></a>
-    <table class="table" border="1">
-        <thead class="thead-dark">
+<h1>Salida de: <?php echo $coleccion; ?></h1>
+<img src="../IMG/logo.png" alt="CAEV" width="500" height="160">
+<br>
+<a href="./formulario_crear.php"><button type="button" class="btn btn-primary">Agregar Nuevo Registro <i class="bi bi-plus-circle-fill"></i></button></a>
+<table class="table" border="1">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">numero</th>
+            <th scope="col">cuenta</th>
+            <th scope="col">usuario</th>
+            <th scope="col">direccion</th>
+            <th scope="col">tipo de usuario</th>
+            <th scope="col">obra</th>
+            <th scope="col">lleva cuadro</th>
+            <th scope="col">fecha instalación</th>
+            <th scope="col">salida</th>
+           <th scope="col">Editar</th>
+           <th scope="col">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($datos as $dato): ?>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">numero</th>
-                <th scope="col">cuenta</th>
-                <th scope="col">usuario</th>
-                <th scope="col">direccion</th>
-                <th scope="col">tipo de usuario</th>
-                <th scope="col">obra</th>
-                <th scope="col">lleva cuadro</th>
-                <th scope="col">fecha instalación</th>
-                <th scope="col">salida</th>
-               <th scope="col">Editar</th>
-               <th scope="col">Eliminar</th>
+                <td><?php echo $dato->_id; ?></td>
+                <td><?php echo $dato->num_medidor; ?></td>
+                <td><?php echo $dato->cuentamedidor; ?></td>
+                <td><?php echo $dato->nombreusuario; ?></td>
+                <td><?php echo $dato->direccion; ?></td>
+                <td><?php echo $dato->tipousuario; ?></td>
+                <td><?php echo $dato->obra; ?></td>
+                <td><?php echo $dato->cuadro; ?></td>
+                <td><?php echo $dato->fechainstalacion; ?></td>
+                <td><?php echo $dato->fechasalida; ?></td>
+                <td>
+                    <a href="./formulario_editar.php?id=<?php echo $dato->_id; ?>"><button type="button" class="btn btn-warning">Editar <i class="bi bi-pen-fill"></i></button>
+                </td>
+                <td>
+                    <button onclick="confirmarEliminar('<?php echo $dato->_id; ?>')"type="button" class="btn btn-danger">Eliminar <i class="bi bi-trash-fill"></i></button>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($datos as $dato): ?>
-                <tr>
-                    <td><?php echo $dato->_id; ?></td>
-                    <td><?php echo $dato->num_medidor; ?></td>
-                    <td><?php echo $dato->cuentamedidor; ?></td>
-                    <td><?php echo $dato->nombreusuario; ?></td>
-                    <td><?php echo $dato->direccion; ?></td>
-                    <td><?php echo $dato->tipousuario; ?></td>
-                    <td><?php echo $dato->obra; ?></td>
-                    <td><?php echo $dato->cuadro; ?></td>
-                    <td><?php echo $dato->fechainstalacion; ?></td>
-                    <td><?php echo $dato->fechasalida; ?></td>
-                    <td>
-                        <a href="./formulario_editar.php?id=<?php echo $dato->_id; ?>"><button type="button" class="btn btn-warning">Editar <i class="bi bi-pen-fill"></i></button>
-                    </td>
-                    <td>
-                         <button onclick="confirmarEliminar('<?php echo $dato->_id; ?>')"type="button" class="btn btn-danger">Eliminar <i class="bi bi-trash-fill"></i></button>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-       
-</body>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
 <!-- Incluir jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Incluir Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <!-- Incluir Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
 
+<script>
+    // Aumentar tamaño de fuente
+    document.getElementById('aumentar').addEventListener('click', function() {
+        document.querySelectorAll('body, table, th, td').forEach(function(el) {
+            el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) + 1) + 'px';
+        });
+    });
+
+    // Reducir tamaño de fuente
+    document.getElementById('reducir').addEventListener('click', function() {
+        document.querySelectorAll('body, table, th, td').forEach(function(el) {
+            el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) - 1) + 'px';
+        });
+    });
+</script>
+
+</body>
 </html>
