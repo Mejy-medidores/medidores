@@ -109,7 +109,7 @@ $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : '';
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/006/692/987/small_2x/download-pdf-icon-template-black-color-editable-download-pdf-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" class="card-img-top" alt="Reportes de entrada"/>
                     <div class="card-body">
                         <h5 class="card-title">Reportes de entrada</h5>
-                        <a href="reporte_entrada.html" class="btn btn-primary">Ir</a>
+                        <a href="reporte_entrada.php" class="btn btn-primary">Ir</a>
                     </div>
                 </div>
             </div>
